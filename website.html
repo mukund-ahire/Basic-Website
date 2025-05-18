@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Header & Footer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body
+  class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-all duration-300 relative"
+>
+  <!-- SCROLL TO TOP -->
+  <button
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    class="fixed bottom-5 right-5 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition hidden md:block"
+    title="Back to Top"
+  >
+    ↑
+  </button>
+
+  <!-- HEADER -->
+  <header
+    class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-md transition-all"
+  >
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold tracking-tight">MySite</div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center space-x-4">
+        <button
+          id="toggleDark"
+          class="p-2 rounded-full bg-gray-200 dark:bg-gray-800 transition hover:scale-110"
+          aria-label="Toggle Dark Mode"
+        >
+          🌙
+        </button>
+        <button
+          class="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition shadow-md"
+        >
+          Sign Up
+        </button>
+        <button
+          id="mobileMenuBtn"
+          class="md:hidden p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800"
+        >
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="#home" class="block nav-link">Home</a>
+      <a href="#about" class="block nav-link">About</a>
+      <a href="#services" class="block nav-link">Services</a>
+      <a href="#projects" class="block nav-link">Projects</a>
+      <a href="#contact" class="block nav-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT PLACEHOLDER -->
+  <main class="min-h-[70vh] px-4 py-20 text-center space-y-10">
+    <section id="home">
+      <h1 class="text-4xl font-bold mb-4">Welcome to MySite</h1>
+    </section>
+    <section id="about">
+      <p class="text-gray-500 dark:text-gray-300">
+        We create modern digital experiences.
+      </p>
+    </section>
+    <section id="services" class="pt-20">
+      <h2 class="text-2xl font-semibold">Services</h2>
+    </section>
+    <section id="projects" class="pt-20">
+      <h2 class="text-2xl font-semibold">Projects</h2>
+    </section>
+    <section id="contact" class="pt-20">
+      <h2 class="text-2xl font-semibold">Contact Us</h2>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer
+    class="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 pt-12 pb-8"
+  >
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- About -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">About Us</h3>
+        <p class="text-sm leading-relaxed">
+          We provide the best solutions for your needs. Our mission is to deliver
+          quality and value to our customers.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline hover:text-blue-600">Home</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-600">Services</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-600">About</a></li>
+          <li><a href="#" class="hover:underline hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Subscribe -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+        <form class="flex flex-col sm:flex-row gap-3">
+          <input
+            type="email"
+            placeholder="Your email"
+            required
+            class="flex-grow px-4 py-2 rounded border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="submit"
+            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+      <!-- Social Links -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+        <div class="flex flex-wrap gap-6 text-3xl">
+          <a
+            href="#"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            class="hover:text-blue-600 transition-colors duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="#"
+            aria-label="GitHub"
+            title="GitHub"
+            class="hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="#"
+            aria-label="Instagram"
+            title="Instagram"
+            class="hover:text-pink-500 transition-colors duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mt-12 border-t border-gray-300 dark:border-gray-700 pt-6 text-center text-sm"
+    >
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const toggleDark = document.getElementById("toggleDark");
+    const html = document.documentElement;
+    const menuBtn = document.getElementById("mobileMenuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    // Toggle mobile menu
+    menuBtn.onclick = () => {
+      mobileMenu.classList.toggle("hidden");
+    };
+
+    // Toggle dark mode with localStorage
+    toggleDark.onclick = () => {
+      html.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        html.classList.contains("dark") ? "dark" : "light"
+      );
+    };
+
+    // Persist theme
+    if (localStorage.getItem("theme") === "dark") {
+      html.classList.add("dark");
+    }
+
+    // Active nav link highlight on scroll
+    const sections = document.querySelectorAll("main section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 80) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove("text-blue-600", "font-bold");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("text-blue-600", "font-bold");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
